@@ -1,0 +1,300 @@
+.container {
+    display: grid;
+    height: 200vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr .1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "Hero1 Hero2"
+        "Header1 Header1"
+        "Challenge1 Challenge1"
+        "Challenge2 Challenge2"
+        "Challenge3 Challenge3"
+        "Challenge4 Challenge4"
+        "Challenge5 Challenge5"
+        "Challenge6 Challenge6"
+        "Challenge7 Challenge7"
+        "Challenge8 Challenge8"
+        "Challenge9 Challenge9"
+        "Challenge10 Challenge10"
+    ;
+    gap: 10px;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;           
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: "Adamina", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-family: "Adamina", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h4 {
+    font-size: 1.75rem;
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h5 {
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+    font-size: 1rem;
+    font-family: "Adamina", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+code {
+    text-wrap: wrap;
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#Hero1 {
+    grid-area: Hero1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#Hero2 {
+    grid-area: Hero2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#Header1 {
+    grid-area: Header1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#Challenge1 {
+    grid-area: Challenge1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#Challenge2 {
+    grid-area: Challenge2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#Challenge3 {
+    grid-area: Challenge3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#Challenge4 {
+    grid-area: Challenge4;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#Challenge5 {
+    grid-area: Challenge5;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#Challenge6 {
+    grid-area: Challenge6;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#Challenge7 {
+    grid-area: Challenge7;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#Challenge8 {
+    grid-area: Challenge8;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#Challenge9 {
+    grid-area: Challenge9;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#Challenge10 {
+    grid-area: Challenge10;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding-bottom: 50px;
+}
+
+.heroLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.heroImageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.heroImage {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    
+}
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* CSS */
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+
+
+
+
+/* Hiding Solutions */
+
+#Solution1 {
+    display: none;
+  }
+
+#Solution2 {
+    display: none;
+  }
+
+#Solution3 {
+    display: none;
+  }
+
+#Solution4 {
+    display: none;
+  }
+
+#Solution5 {
+    display: none;
+  }
+
+#Solution6 {
+    display: none;
+  }
+
+#Solution7 {
+    display: none;
+  }
+
+#Solution8 {
+    display: none;
+  }
+
+#Solution9 {
+    display: none;
+  }
+
+#Solution10 {
+    display: none;
+  }
+
+
+
+
+
+  @media (max-width: 1000px) {
+    
+    .container {
+        display: grid;
+    height: 200vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr .1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "Hero1 Hero1"
+        "Hero2 Hero2"
+        "Header1 Header1"
+        "Challenge1 Challenge1"
+        "Challenge2 Challenge2"
+        "Challenge3 Challenge3"
+        "Challenge4 Challenge4"
+        "Challenge5 Challenge5"
+        "Challenge6 Challenge6"
+        "Challenge7 Challenge7"
+        "Challenge8 Challenge8"
+        "Challenge9 Challenge9"
+        "Challenge10 Challenge10"
+    ;
+    gap: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    ;
+    }
+  }

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Adamina&family=Archivo+Black&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<body>
+    
+    <div class="container">
+
+        <div class="heroLeft" id="Hero1">
+            <h1>Challenges.js</h1>
+            <h4>The best site for beginner programmers to challenge themselves.</h4>
+        
+        </div>
+    
+        <div class="heroImageContainer" id="Hero2">
+            <img class="heroImage" src="images/Programmer.jpg" alt="A triumphant programmer.">
+        </div>
+
+
+        <div class="Header" id="Header1">
+            <h2>Challenges</h2>
+        </div>
+
+        <div id="Challenge1">
+            <h4>Challenge 1</h4>
+            <h5>FizzBuzz</h5>
+            <p>Write a short program that inserts each number from 1 to 100 into an array. 
+
+                For each multiple of 3, print "Fizz" instead of the number. 
+                
+                For each multiple of 5, print "Buzz" instead of the number. 
+                
+                For numbers which are multiples of both 3 and 5, insert "FizzBuzz" instead of the number.</p>
+
+            <button class="button-24" role="button" onclick="solution1Function()">SOLUTION</button>
+                  <div id="Solution1">
+                    <pre><code>
+var output = [];
+var count = 1
+
+function fizzBuzz() {
+
+    while(count <= 100){
+        if (count % 3 === 0 && count % 5 === 0) {
+        output.push("FizzBuzz");
+    } else if (count % 3 === 0){
+        output.push("Fizz");
+    } else if (count % 5 === 0) {
+        output.push("Buzz")
+    } else {
+        output.push(count);
+    } 
+    
+    count++;
+            
+    console.log(output);
+    }
+}
+                    </code></pre>
+                  </div> 
+
+        </div> 
+
+        <div id="Challenge2">
+            <h4>Challenge 2</h4>
+            <h5>99 Bottles of Beer</h5>
+            <p>Write a function in JavaScript that prints the lyrics to "99 Bottles of Beer" song. 
+                <br>
+                <br>
+                For example: 
+                <br>
+                <br>
+                99 bottles of beer on the wall, 99 bottles of beer.
+                Take one down and pass it around, 98 bottles of beer on the wall.
+                <br>
+                98 bottles of beer on the wall, 98 bottles of beer.
+                Take one down and pass it around, 97 bottles of beer on the wall.
+                <br>
+                <br>
+                ...
+                <br>
+                <br>
+                1 bottle of beer on the wall, 1 bottle of beer.
+                Take one down and pass it around, no more bottles of beer on the wall.
+                <br>
+                No more bottles of beer on the wall, no more bottles of beer.
+                Go to the store and buy some more, 99 bottles of beer on the wall.
+                </p>
+
+                <button class="button-24" role="button" onclick="solution2Function()">SOLUTION</button>
+                  <div id="Solution2">
+                    <pre><code>
+var i = 99
+
+while (i > 1) {
+console.log(i + " bottles of beer on the wall, " + i + " bottles of beer.");
+i--;
+console.log("You take one down, pass it around " + i + " bottles of beer on the wall.");
+}
+
+console.log("1 bottle of beer on the wall, 1 bottle of beer.")
+console.log("You take one down, pass it around, no more bottles of beer on the wall")
+
+console.log("No more bottles of beer on the wall, no more bottles of beer.")
+console.log("Go to the store and buy some more, 99 bottles of beer on the wall.")
+                    </code></pre>
+                  </div> 
+        </div> 
+
+        <div id="Challenge3">
+            <h4>Challenge 3</h4>
+            <h5>BMI Calculator</h5>
+            <p>Write a JavaScript function calculateBMI that:
+                <br>
+                <br>
+                Takes two arguments: weight (in kilograms) and height (in meters).
+                <br>
+                <br>
+                Calculates the Body Mass Index (BMI) using the formula:
+                <br>
+                <br>
+                BMI = weight / height<sup>2</sup>
+                <br>
+                <br>
+                Returns a string indicating the BMI category based on the calculated BMI value:
+                <br>
+                <br>
+                Underweight: BMI < 18.5
+                <br>
+                Normal weight: 18.5 ≤ BMI < 24.9
+                <br>
+                Overweight: 25 ≤ BMI < 29.9
+                <br>
+                Obesity: BMI ≥ 30
+                <br>
+                <br>
+                Expected Output
+                If you call calculateBMI(70, 1.75), it should return "Normal weight".</p>
+
+            <button class="button-24" role="button" onclick="solution3Function()">SOLUTION</button>
+                  <div id="Solution3">
+                    <pre><code>
+function bmiCalculator(weight, height) {
+var bmi = Math.floor(weight / (height * height)) 
+
+if(bmi < 18.5){
+        return("Your BMI is " + bmi + ", so you are underweight.")
+    } else if(bmi > 18.5 && bmi < 24.9) {
+        return("Your BMI is " + bmi + ", so you are normal weight.")
+    } else if (bmi > 24.9){
+        return("Your BMI is " + bmi + ", so you are overweight.")
+    } 
+}
+                         
+bmiCalculator()
+                    </code></pre>
+                  </div> 
+
+        </div>
+
+
+        <div id="Challenge4">
+            <h4>Challenge 4</h4>
+            <h5>Dog to Human Age Calculator</h5>
+            <p>
+                Write a promt that takes the age of a users dog and returns the dogs age in human years.
+<br>
+<br>
+To get the human age from a dogs age do the following:
+<br>
+<br>
+Take the dogs age, minus 2. Then muliply that number by 4.  Then add 21.
+<br>
+<br>
+Expected results for a dog who is 7 years old would be 41 years old in human years.
+            </p>
+
+            <button class="button-24" role="button" onclick="solution4Function()">SOLUTION</button>
+                  <div id="Solution4">
+                    <pre><code>
+var dogAge = prompt("Want to know how old your dog is in human years?  How old is your dog?")
+
+var humanAge = (dogAge - 2) * 4 + 21
+
+alert("Your dog is " + humanAge + " years old in human years.")
+                    </code></pre>
+                  </div> 
+
+        </div>
+
+
+        <div id="Challenge5">
+            <h4>Challenge 5</h4>
+            <h5>Fibonacci Sequence Generator</h5>
+            <p>
+                Write a JavaScript function fibonacciGenerator that:
+<br>
+<br>
+Takes one argument, n, representing the number of terms you want in the Fibonacci sequence.
+<br>
+<br>
+Returns an array containing the first n terms of the Fibonacci sequence.
+<br>
+<br>
+The Fibonacci sequence starts with 0 and 1, and each subsequent term is the sum of the previous two terms.
+<br>
+<br>
+Expected Output if you call fibonacciGenerator(7), it should return [0, 1, 1, 2, 3, 5, 8].
+            </p>
+
+            <button class="button-24" role="button" onclick="solution5Function()">SOLUTION</button>
+                  <div id="Solution5">
+                    <pre><code>
+function fibonacciGenerator(n) {
+
+    var arr = [];
+    
+    if (n <= 1){
+        arr.push(0);
+    } else {
+        arr.push(0,1);
+        n--;
+        n--;
+        while(n > 0){
+        var a = arr[arr.length -1]
+        var b = arr[arr.length -2]
+        arr.push(a+b)
+        n--
+    }
+    }
+    
+    console.log(arr);
+    
+    }
+                    </code></pre>
+                  </div> 
+
+        </div>
+
+
+        <div id="Challenge6">
+            <h4>Challenge 6</h4>
+            <h5>Guest List Check</h5>
+            <p>
+                Create an array with a list of names (simulating a guest list), then create a prompt that accepts a name from the user and checks to see if that name is in the array.
+                <br>
+                <br>
+                You can use the following array as an example guest list:
+                <br>
+                var guestList = ["Angela", "Jack", "Pam", "James", "Lara", "Jason", "Steve"];
+                <br>
+                <br>
+                Entering a name into the prompt that is on the guest list should return "Welcome"
+                <br>
+                Entering a name into the prompt that is NOT on the guest list should return "Go Away"
+            </p>
+
+            <button class="button-24" role="button" onclick="solution6Function()">SOLUTION</button>
+                  <div id="Solution6">
+                    <pre><code>
+var guestList = ["Angela", "Jack", "Pam", "James", "Lara", "Jason", "Steve"];
+
+var name = prompt("What is your name?");
+
+function guest() {
+    if (guestList.includes(name)) {
+        alert("Welcome")
+    } else {
+        alert("Go away")
+    }
+}
+
+guest()
+                    </code></pre>
+                  </div> 
+
+        </div>
+
+
+        <div id="Challenge7">
+            <h4>Challenge 7</h4>
+            <h5>Leap Year Calculator</h5>
+            <p>
+                Write a JavaScript function isLeap() that:
+                <br>
+                <br>
+                1. Takes a single argument, year, representing the year to check.
+                <br>
+                <br>
+                2. Return "Leap year." if the year is a leap year, and "Not leap year." if it is now.
+                <br>
+                <br>
+                3. Follows the rules of identifying a leap year:
+                <ul>
+                    <li>A year is a leap year if it is divisible by 4</li>
+                    <li>However, if the year is also divisible by 100, it is not a leap year unless it is also divisible by 400.</li>
+                </ul>
+                <br>
+                Expected output, if you call isLeap(2024), it should return "Leap year." If you call isLeapYear(1900), it should return "Not leap year", since 1900 is divisible by 100 but not by 400.
+            </p>
+
+            <button class="button-24" role="button" onclick="solution7Function()">SOLUTION</button>
+                  <div id="Solution7">
+                    <pre><code>
+function isLeap(year) {
+
+    if (year % 4 == 0 || year % 100 != 0 && year % 400 == 0) {
+            return ("Leap year.")
+    } else {
+        return ("Not leap year.")
+    }
+    
+}
+
+isLeap()
+                    </code></pre>
+                  </div> 
+
+        </div>
+
+
+        <div id="Challenge8">
+            <h4>Challenge 8</h4>
+            <h5>Dice Roll</h5>
+            <p>
+                Write some JavaScript that console logs a random number between 1 and 6 to simulate a dice roll.
+            </p>
+
+            <button class="button-24" role="button" onclick="solution8Function()">SOLUTION</button>
+                  <div id="Solution8">
+                    <pre><code>
+console.log(Math.floor(Math.random() * 6) + 1);
+                    </code></pre>
+                  </div> 
+
+        </div>
+
+
+        <div id="Challenge9">
+            <h4>Challenge 9</h4>
+            <h5>Who's Buying Lunch?</h5>
+            <p>
+                Create an array with a list of names to simulate a group that you are at a restaurant with.  Use a JaveScript function to select a random name from the array and return it.
+            </p>
+
+            <button class="button-24" role="button" onclick="solution9Function()">SOLUTION</button>
+                  <div id="Solution9">
+                    <pre><code>
+function whosPaying(names) {
+
+    var names = ["Angela", "Ben", "Jenny", "Michael", "Chloe"]
+    var listLength = names.length;
+    var randomNum = Math.floor(Math.random() * listLength);
+    var payee = names[randomNum];
+    
+    return(payee);
+
+    
+}
+                    </code></pre>
+                  </div> 
+
+        </div>
+
+
+        <div id="Challenge10">
+            <h4>Bonus Challenge</h4>
+            <h5>Create an Infinate Loop</h5>
+            <p>
+                Break your web browser by writing a JavaScript function that is an infinate loop in order to crash your browser.
+            </p>
+
+            <button class="button-24" role="button" onclick="solution10Function()">SOLUTION</button>
+                  <div id="Solution10">
+                    <pre><code>
+function oneOfUs(i) {
+    while(i > 0){
+        console.log("One of us")
+        i++
+    } 
+    }
+                    </code></pre>
+                  </div> 
+
+        </div>
+
+
+
+
+        
+        
+    
+        
+        </div>
+
+        
+    
+
+
+
+</body>
+</html>
